@@ -1,12 +1,15 @@
-import React, { createRef, useEffect, useRef } from "react";
-import VanillaTilt from "vanilla-tilt";
-import { yellow } from "../theme";
+import React, { createRef, useContext, useEffect, useRef } from "react";
+import { AppContext } from "../context";
 import "./index.css";
 export interface Person {
+  id: string;
   firstName: string;
   lastName: string;
   skills: string[];
   profileImage: string;
+  tools: string[];
+  description: string;
+  major: string;
 }
 interface ProfileProps {
   person: Person;
@@ -20,28 +23,29 @@ const options = {
 //profile card
 export const ProfileCard = ({ person }: ProfileProps): JSX.Element => {
   const cardRef = useRef(null);
+  const { setMember } = useContext(AppContext);
 
-  useEffect(() => {
-    //VanillaTilt.init(cardRef.current!, options);
-  }, []);
   return (
     <div
       ref={cardRef}
+      onClick={() => setMember(person.id)}
       className="border-2 border-black h-48 mt-5 shadow-2xl  rounded-md hover:scale-105 transition duration-200 ease-in"
     >
       <div className="flex">
-        <div className="mt-12 m-6" style={{ width: "30%", height: "100%" }}>
-          <img
-            className=" h-24 w-24 rounded-full"
-            src={
-              "https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png"
-            }
-          />
+        <div className="mt-7 m-6 " style={{ width: "30%", height: "100%" }}>
+          <img className="h-32 w-24 rounded-xl" src={person.profileImage} />
         </div>
         <div className="mt-11">
-          <label className="text-2xl font-bold Courier">{`${person.firstName} ${person.lastName}`}</label>
-          <div>
+          <div className="flex w-full right-0">
+            <div>
+              <label className="text-2xl font-bold Courier">{`${person.firstName} ${person.lastName}`}</label>
+            </div>
+          </div>
+          <div className="mt-5">
             <span className=""> {person.skills.join(",")}</span>
+          </div>
+          <div className="">
+            <span className="text-sm">{person.tools.join(" | ")}</span>
           </div>
         </div>
       </div>

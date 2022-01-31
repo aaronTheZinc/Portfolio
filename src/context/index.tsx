@@ -6,12 +6,12 @@ interface ContextProps {
 }
 const contextInitialValue = {
   setMember: (v: string) => {},
-  member: "",
+  member: "aaron",
 } as ContextProps;
-const AppContext = createContext<ContextProps>(contextInitialValue);
+export const AppContext = createContext<ContextProps>(contextInitialValue);
 
 export const AppProvider = ({ children }: any): JSX.Element => {
   const { Provider } = AppContext;
-  const [member, setMember] = useState<string>("");
+  const [member, setMember] = useState<string>("aaron");
   return <Provider value={{ member, setMember }}>{children}</Provider>;
 };
