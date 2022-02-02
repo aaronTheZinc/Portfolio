@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
   return (
     <div className="h-screen" style={{ backgroundColor: yellow }}>
       <div className="md:flex">
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 sm:order-2">
           <div className="p-10">
             <FadeIn transitionDuration={1000}>
               {Members.map((p, i) => (
@@ -40,11 +40,11 @@ export default function Home(): JSX.Element {
             </FadeIn>
           </div>
         </div>
-        <div className="w-1/2 p-10">
+        <div className="md:w-1/2 md:p-10  sm:order-1 overflow-auto">
           <div
             ref={ContentViewRef}
             style={{ backgroundColor: blue }}
-            className="h-full w-ful"
+            className="h-full w-full"
           >
             <div>
               <div className="p-10">

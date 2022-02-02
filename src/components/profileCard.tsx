@@ -5,12 +5,6 @@ import { Person } from "../types";
 interface ProfileProps {
   person: Person;
 }
-const options = {
-  scale: 1.0,
-  speed: 500,
-  max: 30,
-};
-
 //profile card
 export const ProfileCard = ({ person }: ProfileProps): JSX.Element => {
   const cardRef = useRef(null);
@@ -35,8 +29,10 @@ export const ProfileCard = ({ person }: ProfileProps): JSX.Element => {
           <div className="mt-5">
             <span className=""> {person.skills.join(",")}</span>
           </div>
-          <div className="">
-            <span className="text-sm">{person.tools.join(" | ")}</span>
+          <div className="mt-3">
+            <span className="text-sm p-1 rounded">
+              {person.tools.join(" | ")}
+            </span>
           </div>
         </div>
       </div>

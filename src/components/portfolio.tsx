@@ -25,6 +25,14 @@ export const ProfileDescription = ({
       <div className="mt-10">
         <label className="Courier font-extrabold">{description}</label>
       </div>
+      <div className="mt-5">
+        <div>
+          <label style={{ color: yellow }} className="text-3xl">
+            Links
+          </label>
+        </div>
+        <div></div>
+      </div>
     </div>
   );
 };
@@ -36,15 +44,18 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
     >
       <div
         style={{ borderColor: yellow }}
-        className="border-2 h-60 mt-9 rounded-lg bg-white flex"
+        className="border-2 overflow-auto h-60 mt-9 rounded-lg bg-white flex"
       >
-        <div className="p-6 w-1/2">
+        <div className="p-6 w-2/3">
           <div className="font-bold">
             <label>{project.title}</label>
           </div>
-          <div className="mt-6 Courier">
+          <div className="mt-6 overflow-auto Courier">
             <p>{project.desription}</p>
           </div>
+        </div>
+        <div className=" w-1/3">
+          <img className=" w-3/4 mt-16" src={project.image} />
         </div>
       </div>
     </div>
@@ -59,7 +70,7 @@ export const ProfileProjects = ({ projects }: ProjectViewProps) => {
           Projects
         </label>
       </div>
-      <div className="overflow-auto">
+      <div className="max-h-screen overflow-auto">
         {projects.map((project, i) => (
           <ProjectCard index={i} project={project} />
         ))}

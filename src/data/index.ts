@@ -3,6 +3,11 @@ import {
   AaronProfilePicture,
   ArnobProfilePicture,
   CamilleProfilePicture,
+  ConnectMeLogo,
+  DTELogo,
+  FRCLogo,
+  EcotekLogo,
+  CAY2Logo,
 } from "../assets";
 import { NdudiProfilePicture } from "../assets";
 export const Members = [
@@ -15,15 +20,38 @@ export const Members = [
     profileImage: AaronProfilePicture,
     tools: ["Swift", "JavaScript", "TypeScript", "Golang", "C++", "Python"],
     description:
-      "Hi, My name is Aaron Marsh! I am an aspiring Computer Scientist. Currently I am a Full-Stack Developer meaning I build mobile and web applications. I also work with Robotics and Machine Learning. I am apart of the MEZ (Michigan Engineering Zone) where my team builds our robots!",
+      "My name is Aaron Marsh, and I am an aspiring Computer Scientist. I am currently a Full-Stack Developer who builds mobile and web applications. In addition, I work with Robotics and Machine Learning. Finally, as a member of the MEZ (Michigan Engineering Zone) our team has the awesome task of building robots!",
     projects: [
       {
         title: "Connect Me Tutoring",
-        desription: "I volunteered to build a Cross-Platform App",
+        desription:
+          "I volunteered to build a Cross-Platform App which allows students and tutors onboarded into the organization. It provides one place to access session information such as zoom links and reminders of upcoming sessions. I used React Native, TypeScript and Golang.",
+        image: ConnectMeLogo,
+        link: "",
       },
       {
-        title: "Connect Me Tutoring Mobile APP",
-        desription: "I volunteered to build a Cross-Platform App",
+        title: "DTE",
+        image: DTELogo,
+        desription:
+          "I worked on the internal tool DTE uses to send push notifications to their clients to inform them on outages. I used Angular, JavaScript and DOTNET FrameWork. ",
+      },
+      {
+        title: "Renaissance Robotics",
+        image: FRCLogo,
+        desription:
+          "I am the Robotics Programming Captain for Renaissance. We are using C++ this year and will be implementing autonomous functionality.",
+      },
+      {
+        title: "Ecotek Labratories",
+        image: EcotekLogo,
+        desription:
+          "At Ecotek, I train autonomous vehicles using Neural and Convolutional Networks in C++.",
+      },
+      {
+        title: "CAY2 Foundation",
+        image: CAY2Logo,
+        desription:
+          "CAY2 is a program I joinded where we were tasked to identify problems in our community and solving them using technology to solve them. Are application is still in the works. I use JavaScript and Rust.",
       },
     ],
   },

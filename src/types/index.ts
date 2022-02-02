@@ -1,7 +1,8 @@
 export interface Project {
   title: string;
   desription: string;
-  images: string;
+  image: string;
+  link?: string;
 }
 export interface Person {
   id: string;
