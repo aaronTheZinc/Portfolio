@@ -1,12 +1,17 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { blue, yellow } from "../theme";
-import { ProfileCard, ProfileDescription } from "../components";
+import {
+  ProfileCard,
+  ProfileDescription,
+  ProfileProjects,
+} from "../components";
 import { Members } from "../data";
 import { AppContext } from "../context";
 import FadeIn from "react-fade-in";
 import VanillaTilt from "vanilla-tilt";
-import { Person } from "../components/profileCard";
+import { Person } from "../types";
 import "./index.css";
+
 export default function Home(): JSX.Element {
   const [person, setPerson] = useState<Person>(Members[0]);
   const ContentViewRef = useRef(null);
@@ -55,6 +60,7 @@ export default function Home(): JSX.Element {
               </div>
               <div>
                 <ProfileDescription description={person.description} />
+                <ProfileProjects projects={person.projects} />
               </div>
               <div></div>
             </div>

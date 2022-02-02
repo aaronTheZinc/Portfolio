@@ -1,16 +1,7 @@
 import React, { createRef, useContext, useEffect, useRef } from "react";
 import { AppContext } from "../context";
 import "./index.css";
-export interface Person {
-  id: string;
-  firstName: string;
-  lastName: string;
-  skills: string[];
-  profileImage: string;
-  tools: string[];
-  description: string;
-  major: string;
-}
+import { Person } from "../types";
 interface ProfileProps {
   person: Person;
 }
