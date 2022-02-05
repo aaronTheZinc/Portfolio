@@ -8,6 +8,12 @@ import FRCLogo from "./frclogo.png";
 import EcotekLogo from "./ecoteklogo.png";
 import Logo from "./logo.png";
 import CAY2Logo from "./cay2logo.jpeg";
+import SHPELogo from "./shpelogo.png"
+import NAFLogo from "./naflogo.png"
+import MathCorpsLogo from "./mathcorpslogo.png"
+import DODStemLogo from "./dodstemlogo.png"
+import LTULogo from "./ltulogo.png"
+import MIHLogo from "./mihlogo.png"
 export {
   AaronProfilePicture,
   Logo,
@@ -19,4 +25,10 @@ export {
   FRCLogo,
   EcotekLogo,
   CAY2Logo,
+  SHPELogo,
+  NAFLogo,
+  MathCorpsLogo,
+  DODStemLogo,
+  LTULogo,
+  MIHLogo
 };

@@ -14,7 +14,7 @@ export const ProfileCard = ({ person }: ProfileProps): JSX.Element => {
     <div
       ref={cardRef}
       onClick={() => setMember(person.id)}
-      className="border-2 border-black h-48 mt-5 shadow-2xl  rounded-md hover:scale-105 transition duration-200 ease-in"
+      className="border-2 border-black h-64 mt-5 shadow-2xl  rounded-md hover:scale-105 transition duration-200 ease-in"
     >
       <div className="flex">
         <div className="mt-7 m-6 " style={{ width: "30%", height: "100%" }}>

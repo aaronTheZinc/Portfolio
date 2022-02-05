@@ -6,9 +6,7 @@ import { Home } from "./pages";
 import { NavBar } from "./components";
 import { AppProvider } from "./context";
 function App() {
-  useEffect(() => {
-    document.title = "Portfolio";
-  }, []);
+
   return (
     <AppProvider>
       <BrowserRouter>
