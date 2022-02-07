@@ -8,7 +8,7 @@ import {
 import { Members } from "../data";
 import { AppContext } from "../context";
 import FadeIn from "react-fade-in";
-import VanillaTilt from "vanilla-tilt";
+import Swal from "sweetalert2"
 import { Person } from "../types";
 import "./index.css";
 
@@ -17,11 +17,19 @@ export default function Home(): JSX.Element {
     const ContentViewRef = useRef(null);
     const { member } = useContext(AppContext);
     useEffect(() => {
-        // VanillaTilt.init(ContentViewRef.current!, {
-        //     scale: 1.0,
-        //     speed: 500,
-        //     max: 10,
-        // });
+        Swal.fire({
+            title: '<strong>Welcome!</strong>',
+            icon: 'info',
+            html:
+                `My name is <span style="color:${yellow};font-weight: bold;">Aaron Marsh </span>! I created this website using <u> <b> React JS </b> </u>'
+                This is a portfolio website used to display the achievements of myself, <u>Arnob </u> and <u>Camille! </u>`,
+            showCloseButton: true,
+            showCancelButton: false,
+            focusConfirm: false,
+            confirmButtonText:
+                '<i class="fa fa-thumbs-up"></i> Great!',
+            confirmButtonAriaLabel: 'Thumbs up, great!',
+        })
     }, []);
 
     useEffect(() => {
